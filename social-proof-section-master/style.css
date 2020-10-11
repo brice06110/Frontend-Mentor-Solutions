@@ -1,0 +1,333 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.col-1 {
+    width: 8.333%;
+}
+
+.col-2 {
+    width: 16.666%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.333%
+}
+
+.col-5 {
+    width: 41.0666%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.3333%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.333%;
+}
+
+.col-11 {
+    width: 91.666%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.offset-1 {
+    /*marge d'une certaine taille  (en colonne)*/
+    margin-left: 8.333%;
+}
+
+.offset-2 {
+    margin-left: 16.666%;
+}
+
+.offset-3 {
+    margin-left: 25%;
+}
+
+.offset-4 {
+    margin-left: 33.333%
+}
+
+.offset-5 {
+    margin-left: 41.0666%;
+}
+
+.offset-6 {
+    margin-left: 50%;
+}
+
+.offset-7 {
+    margin-left: 58.3333%;
+}
+
+.offset-8 {
+    margin-left: 66.66%;
+}
+
+.offset-9 {
+    margin-left: 75%;
+}
+
+.offset-10 {
+    margin-left: 83.666%;
+}
+
+.offset-11 {
+    margin-left: 91.666%;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    float: left;
+    padding: 0 10px;
+    display: block;
+}
+
+/*Pour calculer la width d'une colone : 1, 2, 3.../12x100 */
+
+/*Une balise lambda sera moins prioritaire par rapport
+a une classe, donc préciser la commande CSS, l'ID sera par
+contre prioritaire par rapport à la classe :
+			ID > Classe > Balise */
+.row {
+    clear: both;
+}
+
+.row::before {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.row::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+/*=================== Fin des classes usuelle =======================*/
+body{
+    font-family: 'Spartan', sans-serif;
+    height: 100vh;
+    background-image: url(images/bg-pattern-bottom-desktop.svg), url(images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right, top left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.page-titles h1 {
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    font-size: 4em;
+    line-height: 1em;
+    padding-bottom: 1.5rem;
+}
+
+.page-titles h2 {
+    color: hsl(303, 10%, 53%);
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+.page-titles,
+.all-rates {
+    width: 50%;
+}
+/*.container .all-rates{
+    width: 45%;
+}*/
+.all-rates .rate:first-child{
+    margin-right: 20%;
+}
+.all-rates .rate:last-child{
+    margin-left: 20%;
+}
+.all-buyer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.all-buyer .buyer{
+    width: 30%;
+}
+.all-rates{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 15px;
+}
+.all-rates .rate{
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    padding: 20px 20px 20px 40px
+}
+.all-rates .rate .stars{
+    width: 26.6%;
+    background-image: url(images/icon-star.svg);
+    background-repeat: space;
+    background-size: contain;
+}
+.all-rates .rate .title{
+    width: 70%;
+    display: flex;  
+    justify-content: center;        
+    align-items: center;
+    color: hsl(300, 43%, 22%);
+}
+.all-buyer{
+    padding-top: 80px;
+}
+.all-buyer .buyer:nth-child(2){
+    transform: translateY(8%);
+}
+.all-buyer .buyer:last-child{
+    transform: translateY(16%);
+}
+.all-buyer .buyer{
+    background: hsl(300, 43%, 22%);
+    color: hsl(0, 0%, 100%);
+    padding: 40px;
+    border-radius: 10px;
+}
+.all-buyer .buyer p{
+    font-size: 15px;
+    line-height: 25px;
+}
+.all-buyer .buyer .buyer-header{
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;   
+}
+.all-buyer .buyer .buyer-header .titles{
+    padding-left: 30px;
+}
+
+.all-buyer .buyer .buyer-header h3{
+    font-size: 0.9em;
+}
+.all-buyer .buyer .buyer-header h4 {
+    font-size: 0.9em;
+    padding-top: 5px;
+    font-weight: 400;
+    color: hsl(333, 80%, 67%);
+}
+.all-buyer .buyer .buyer-header .picture img {
+    height: 50px;
+    border-radius: 50%;
+}
+.attribution{
+    position: absolute;
+    bottom: 10px;
+}
+
+/*================= RESPONSIVE =====================*/
+@media screen and (max-width: 375px){
+    body{
+        background-image: url(images/bg-pattern-bottom-mobile.svg), url(images/bg-pattern-top-mobile.svg);
+        background-position: bottom, top;
+        display: block;
+        height: auto;
+        position: relative;
+    }
+    .container{
+        display: block;
+        width: auto;
+        margin: 20px;
+    }
+    .page-titles, .all-rates{
+        width: 100%;
+        text-align: center;
+    }
+    .page-titles{
+        padding-bottom: 30px;
+    }
+    .page-titles h1{
+        font-size: 2em;
+    }
+    .page-titles h2{
+        font-size: 1em;
+    }   
+    .container .all-rates .rate{
+        margin: 10px 0 10px 0;
+    }
+    .all-rates .rate{
+        flex-direction: column;
+        width: 100%;
+    }
+    .all-rates .rate .stars{
+        width: 45.8%;
+        height: 20px;
+        margin: auto;
+    }
+    .all-rates .rate .title{
+        width: 100%;
+    }
+    .all-rates .rate .title h3{
+        font-size: 1em;
+        padding-top: 15px;
+    }
+    .all-buyer{
+        display: block;
+    }
+    .container .all-buyer .buyer{
+        width: 100%;
+        transform: translate(0);
+        margin: 20px 0;
+    }
+    .attribution {
+        bottom: -20px;
+        left: 0;
+        right: 0;
+    }
+}
